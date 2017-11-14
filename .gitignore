@@ -1,0 +1,11 @@
+.idea
+*.iml
+target
+build
+.project
+.settings
+.classpath
+.gradle
+/gradle.properties
+classes
+**/out/artifacts

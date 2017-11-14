@@ -1,0 +1,37 @@
+System.setProperty("file.encoding", "UTF-8")
+
+apply plugin: 'war'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.akhikhl.gretty:gretty:+'
+  }
+}
+
+repositories {
+  jcenter()
+  maven { url 'http://jasperreports.sourceforge.net/maven2' }
+}
+
+apply plugin: 'org.akhikhl.gretty'
+
+dependencies {
+    compile 'net.sourceforge.dynamicreports:dynamicreports-core:4+'
+    compile 'net.sf.jasperreports:jasperreports-fonts:4.0.0'
+    compile 'org.apache.wink:wink-server:1.4+'
+    compile 'org.codehaus.jackson:jackson-jaxrs:1.9+'
+
+    testCompile 'org.apache.httpcomponents:httpclient'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
