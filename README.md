@@ -11,7 +11,7 @@
 2. ./gradlew appStop
 
  тестовый URL для возврата PDF-отчета
- http://localhost:8080/jasperExample/rest/api/jasperreport/pdf
+ http://localhost:8080/jasperExamplePdfExample/rest/api/jasperreport/pdf
 
  тестовый URL для проверки работоспособности
- http://localhost:8080/jasperExample/rest/api/jasperreport/echo?message=helloWorld
+ http://localhost:8080/jasperExample/rest/api/jasperreportPdfExample/echo?message=helloWorld
